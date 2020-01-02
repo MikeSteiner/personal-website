@@ -168,18 +168,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/types/tsconfig.lib.json",
-              "libs/types/tsconfig.spec.json"
+              "libs/types/tsconfig.lib.json"
             ],
             "exclude": ["**/node_modules/**", "!libs/types/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/types/jest.config.js",
-            "tsConfig": "libs/types/tsconfig.spec.json",
-            "setupFile": "libs/types/src/test-setup.ts"
           }
         }
       },
