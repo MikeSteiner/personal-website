@@ -17,7 +17,9 @@
     "baseUrl": ".",
     "paths": {
       "@personal-website/api": ["libs/api/src/index.ts"],
-      "@personal-website/types": ["libs/types/src/index.ts"]
+      "@personal-website/types": ["libs/types/src/index.ts"],
+      "@personal-website/core": ["libs/core/src/index.ts"],
+      "@personal-website/shared": ["libs/shared/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

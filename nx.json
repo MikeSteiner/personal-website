@@ -19,6 +19,12 @@
     },
     "types": {
       "tags": []
+    },
+    "core": {
+      "tags": []
+    },
+    "shared": {
+      "tags": []
     }
   }
 }
