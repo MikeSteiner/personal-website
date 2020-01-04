@@ -3,34 +3,35 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () =>
-      import('./features/home/home.module').then(m => m.HomeModule)
-  },
-  // {
-  //   path: 'about',
-  //   loadChildren: () =>
-  //     import('./features/about/about.module').then(m => m.AboutModule)
-  // },
-  // {
-  //   path: 'experience',
-  //   loadChildren: () =>
-  //     import('./features/experience/experience.module').then(m => m.ExperienceModule)
-  // },
-  // {
-  //   path: 'contacts',
-  //   loadChildren: () =>
-  //     import('./features/contacts/contacts.module').then(m => m.ContactsModule)
-  // },
-  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
   },
   {
+    path: 'home',
+    loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule)
+  },
+  {
+    path: 'about',
+    loadChildren: () => import('./features/about/about.module').then(m => m.AboutModule)
+  },
+  {
+    path: 'experience',
+    loadChildren: () => import('./features/experience/experience.module').then(m => m.ExperienceModule)
+  },
+  {
+    path: 'portfolio',
+    loadChildren: () => import('./features/portfolio/portfolio.module').then(m => m.PortfolioModule)
+  },
+  {
+    path: 'contacts',
+    loadChildren: () => import('./features/contact/contact.module').then(m => m.ContactModule)
+  },
+  {
     path: '**',
     redirectTo: 'home'
-  }
+  },
+
 ];
 
 @NgModule({

@@ -6,12 +6,6 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-    // data: { title: 'personal.menu.home' }
-  },
-  {
-    path: 'home',
     component: HomeComponent,
     // data: { title: 'personal.menu.home' }
   }
