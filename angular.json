@@ -25,7 +25,11 @@
               "apps/alex-personal-website/src/favicon.ico",
               "apps/alex-personal-website/src/assets"
             ],
-            "styles": ["apps/alex-personal-website/src/styles.scss"],
+            "styles": [
+              "./node_modules/bootstrap//dist/css/bootstrap.min.css",
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "apps/alex-personal-website/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -84,7 +88,10 @@
               "apps/alex-personal-website/tsconfig.app.json",
               "apps/alex-personal-website/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/alex-personal-website/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/alex-personal-website/**"
+            ]
           }
         },
         "test": {
@@ -118,7 +125,9 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/alex-personal-website-e2e/tsconfig.e2e.json"],
+            "tsConfig": [
+              "apps/alex-personal-website-e2e/tsconfig.e2e.json"
+            ],
             "exclude": [
               "**/node_modules/**",
               "!apps/alex-personal-website-e2e/**"
@@ -140,7 +149,10 @@
               "libs/api/tsconfig.lib.json",
               "libs/api/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/api/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/api/**"
+            ]
           }
         },
         "test": {
@@ -167,8 +179,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["libs/types/tsconfig.lib.json"],
-            "exclude": ["**/node_modules/**", "!libs/types/**"]
+            "tsConfig": [
+              "libs/types/tsconfig.lib.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/types/**"
+            ]
           }
         }
       },
@@ -191,7 +208,10 @@
               "libs/core/tsconfig.lib.json",
               "libs/core/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/core/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/core/**"
+            ]
           }
         },
         "test": {
@@ -222,7 +242,10 @@
               "libs/shared/tsconfig.lib.json",
               "libs/shared/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/shared/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/shared/**"
+            ]
           }
         },
         "test": {

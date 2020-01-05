@@ -7,12 +7,26 @@ import { AppComponent } from './app/app.component';
 import { SharedModule } from '@personal-website/shared';
 import { CoreModule } from '@personal-website/core';
 import { HeaderComponent } from './shared/header/header.component';
+import { GridComponent } from './app/grid/grid.component';
+import { MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
+import { MainNavComponent } from './shared/nav/main-nav/main-nav.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    GridComponent,
+    MainNavComponent
+  ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
+
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule,
+    MatButtonModule,
 
     // core & shared
     CoreModule,
