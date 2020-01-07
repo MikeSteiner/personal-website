@@ -1,4 +1,13 @@
 @import 'styles-variables';
 
+@import '../../../node_modules/bootstrap/scss/bootstrap-reboot';
+@import '../../../node_modules/bootstrap/scss/bootstrap-grid';
+//@import '../../../node_modules/bootstrap/scss/utilities';
+//@import '../../../node_modules/bootstrap/scss/nav';
+//@import '../../../node_modules/bootstrap/scss/navbar';
+//@import '../../../node_modules/bootstrap/scss/buttons';
+//@import '../../../node_modules/bootstrap/scss/transitions';
+//@import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

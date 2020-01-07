@@ -1,0 +1,22 @@
+nav {
+  font-size: 1rem;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+
+  a {
+    margin-left: 0.5rem;
+    text-transform: uppercase;
+  }
+
+  a .active{
+    color: #00a78e;
+  }
+}
+
+.nav-spacer {
+  flex: 1 1 auto;
+}
+
+.navigation-top {
+  justify-content: space-between !important;
+}
