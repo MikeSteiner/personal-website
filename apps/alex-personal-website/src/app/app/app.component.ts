@@ -36,6 +36,7 @@ export class AppComponent implements OnInit{
 
   constructor() {}
 
+  // Todo check this method
   private static isIEorEdgeOrSafari() {
     return ['ie', 'edge', 'safari'].includes(browser().name);
   }
