@@ -37,6 +37,7 @@ export class AppComponent implements OnInit, OnDestroy{
 
   // constructor() {}
 
+  // Todo check this method
   private static isIEorEdgeOrSafari() {
     return ['ie', 'edge', 'safari'].includes(browser().name);
   }
