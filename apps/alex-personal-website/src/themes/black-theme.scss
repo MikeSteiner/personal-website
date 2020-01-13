@@ -1,0 +1,9 @@
+$nesch-black-primary: mat-palette($mat-grey, 700, 300, 900);
+$nesch-black-accent: mat-palette($mat-blue-grey, 400);
+$nesch-black-warn: mat-palette($mat-red, 500);
+
+$nesch-black-theme: mat-dark-theme(
+  $nesch-black-primary,
+  $nesch-black-accent,
+  $nesch-black-warn
+);

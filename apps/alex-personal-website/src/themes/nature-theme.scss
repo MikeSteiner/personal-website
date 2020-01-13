@@ -1,0 +1,9 @@
+$nesch-nature-primary: mat-palette($mat-brown, 700, 300, 900);
+$nesch-nature-accent: mat-palette($mat-deep-purple, 300);
+$nesch-nature-warn: mat-palette($mat-red, 600);
+
+$nesch-nature-theme: mat-light-theme(
+  $nesch-nature-primary,
+  $nesch-nature-accent,
+  $nesch-nature-warn
+);

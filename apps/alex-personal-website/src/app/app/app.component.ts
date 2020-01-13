@@ -1,9 +1,10 @@
 import browser from 'browser-detect';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { environment as env } from '../../environments/environment';
 
 import { ROUTE_ANIMATIONS_ELEMENTS, routeAnimations } from '../../core/animations/route.animations';
+import { MediaMatcher } from '@angular/cdk/layout';
 
 @Component({
   selector: 'personal-website-root',
@@ -11,7 +12,7 @@ import { ROUTE_ANIMATIONS_ELEMENTS, routeAnimations } from '../../core/animation
   styleUrls: ['./app.component.scss'],
   animations: [routeAnimations]
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit, OnDestroy{
   title = 'alex-personal-website';
 
   isProd = env.production;
@@ -34,7 +35,7 @@ export class AppComponent implements OnInit{
 
   stickyHeader$: Observable<boolean>;
 
-  constructor() {}
+  // constructor() {}
 
   private static isIEorEdgeOrSafari() {
     return ['ie', 'edge', 'safari'].includes(browser().name);
@@ -46,5 +47,31 @@ export class AppComponent implements OnInit{
     }
 
     this.stickyHeader$ = of(true);
+  }
+
+
+
+
+  mobileQuery: MediaQueryList;
+
+  fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
+
+  fillerContent = Array.from({length: 50}, () =>
+    `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+       labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+       laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+       voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`);
+
+  private _mobileQueryListener: () => void;
+
+  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
+    this.mobileQuery = media.matchMedia('(max-width: 600px)');
+    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+    this.mobileQuery.addListener(this._mobileQueryListener);
+  }
+
+  ngOnDestroy(): void {
+    this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 }

@@ -1,0 +1,39 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+      <a mat-list-item [routerLink]="navigation[0].link"> {{navigation[0].label }} </a>
+      <a mat-list-item [routerLink]="navigation[1].link"> {{navigation[1].label }} </a>
+      <a mat-list-item [routerLink]="navigation[2].link"> {{navigation[2].label }} </a>
+      <a mat-list-item [routerLink]="navigation[3].link"> {{navigation[3].label }} </a>
+      <a mat-list-item [routerLink]="navigation[4].link"> {{navigation[4].label }} </a>
+      <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content">
+      <router-outlet #o="outlet"></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    </button>
+    <h1>SimpleCRM</h1>
+    <span class="menu-spacer"></span>
+    <div>
+      <a mat-button [routerLink]="navigation[0].link"> {{navigation[0].label }} </a>
+      <a mat-button [routerLink]="navigation[1].link"> {{navigation[1].label }} </a>
+      <a mat-button [routerLink]="navigation[2].link"> {{navigation[2].label }} </a>
+      <a mat-button [routerLink]="navigation[3].link"> {{navigation[3].label }} </a>
+      <a mat-button [routerLink]="navigation[4].link"> {{navigation[4].label }} </a>
+    </div>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row>
+    <span style="font-size: 12px;">SimpleCRM helps you easily manage your contacts</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
