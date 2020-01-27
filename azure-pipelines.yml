@@ -18,5 +18,5 @@ steps:
 - script: npm install    
   displayName: 'Install dependencies'
 
-- script: npm run build
+- script: npm run build:github
   displayName: 'Build'
